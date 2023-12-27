@@ -14,19 +14,20 @@ struct ContentView: View {
                 NavigationBarView()
                     .padding(.horizontal, 15)
                     .padding(.bottom)
-                    .padding(.top, UIApplication.shared.connectedScenes
-                        .compactMap { $0 as? UIWindowScene }
-                        .first?
-                        .windows
-                        .first?
-                        .safeAreaInsets.top)
+                    .padding(.top, safeAreaInsetTop)
                     .background(.white)
                     .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
                 
-                Spacer()
-                
-                FooterView()
-                    .padding(.horizontal)
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 0) {
+                        FeaturedTabView()
+                            .padding(.vertical)
+                            .frame(height: UIScreen.main.bounds.width / 1.475)
+                        
+                        FooterView()
+                            .padding(.horizontal)
+                    }
+                }
             }
             .background(ColorConstant.colorBackground.ignoresSafeArea())
         }
