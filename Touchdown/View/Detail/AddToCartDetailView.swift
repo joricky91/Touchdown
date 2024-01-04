@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct AddToCartDetailView: View {
+    var product: Product
+    
     var body: some View {
         Button {
-            
+            feedback.impactOccurred()
         } label: {
             Spacer()
             
@@ -23,12 +25,12 @@ struct AddToCartDetailView: View {
         }
         .padding(16)
         .background(
-            Color(red: sampleProduct.red, green: sampleProduct.green, blue: sampleProduct.blue)
+            Color(red: product.red, green: product.green, blue: product.blue)
         )
         .clipShape(Capsule())
     }
 }
 
 #Preview {
-    AddToCartDetailView()
+    AddToCartDetailView(product: sampleProduct)
 }

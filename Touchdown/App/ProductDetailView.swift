@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @EnvironmentObject var shop: Shop
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             // Navbar
@@ -16,11 +18,11 @@ struct ProductDetailView: View {
                 .padding(.top, safeAreaInsetTop)
             
             // Header
-            HeaderDetailView()
+            HeaderDetailView(product: shop.selectedProduct ?? sampleProduct)
                 .padding(.horizontal)
             
             // Detail Top Part
-            TopPartDetailView()
+            TopPartDetailView(product: shop.selectedProduct ?? sampleProduct)
                 .padding(.horizontal)
                 .zIndex(1)
             
@@ -33,7 +35,7 @@ struct ProductDetailView: View {
                 
                 // Description
                 ScrollView(.vertical, showsIndicators: false) {
-                    Text(sampleProduct.description)
+                    Text(shop.selectedProduct?.description ?? sampleProduct.description)
                         .font(.system(.body, design: .rounded))
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
@@ -44,7 +46,7 @@ struct ProductDetailView: View {
                     .padding(.vertical, 10)
                 
                 // Add to Cart
-                AddToCartDetailView()
+                AddToCartDetailView(product: shop.selectedProduct ?? sampleProduct)
                     .padding(.bottom, 20)
             }
             .padding(.horizontal, 20)
@@ -57,7 +59,7 @@ struct ProductDetailView: View {
         .zIndex(0)
         .ignoresSafeArea()
         .background(
-            Color(red: sampleProduct.red, green: sampleProduct.green, blue: sampleProduct.blue)
+            Color(red: shop.selectedProduct?.red ?? sampleProduct.red, green: shop.selectedProduct?.green ?? sampleProduct.green, blue: shop.selectedProduct?.blue ?? sampleProduct.blue)
                 .ignoresSafeArea()
         )
     }
@@ -65,4 +67,5 @@ struct ProductDetailView: View {
 
 #Preview {
     ProductDetailView()
+        .environmentObject(Shop())
 }

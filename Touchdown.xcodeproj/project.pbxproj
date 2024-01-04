@@ -41,6 +41,7 @@
 		5127C2302B3D6B47007FE188 /* RatingsSizesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127C22F2B3D6B47007FE188 /* RatingsSizesDetailView.swift */; };
 		5127C2322B3D6CE8007FE188 /* QuantityFavouriteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127C2312B3D6CE8007FE188 /* QuantityFavouriteDetailView.swift */; };
 		5127C2342B3D6DE4007FE188 /* AddToCartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127C2332B3D6DE4007FE188 /* AddToCartDetailView.swift */; };
+		5127C2362B3D73F6007FE188 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127C2352B3D73F6007FE188 /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		5127C22F2B3D6B47007FE188 /* RatingsSizesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsSizesDetailView.swift; sourceTree = "<group>"; };
 		5127C2312B3D6CE8007FE188 /* QuantityFavouriteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityFavouriteDetailView.swift; sourceTree = "<group>"; };
 		5127C2332B3D6DE4007FE188 /* AddToCartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartDetailView.swift; sourceTree = "<group>"; };
+		5127C2352B3D73F6007FE188 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				5127C2012B3C04ED007FE188 /* Constant.swift */,
 				5127C22D2B3D6991007FE188 /* CustomShape.swift */,
+				5127C2352B3D73F6007FE188 /* Shop.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				5127C2102B3C126A007FE188 /* FeaturedTabView.swift in Sources */,
 				5127C22E2B3D6991007FE188 /* CustomShape.swift in Sources */,
 				5127C2062B3C0893007FE188 /* NavigationBarView.swift in Sources */,
+				5127C2362B3D73F6007FE188 /* Shop.swift in Sources */,
 				5127C2202B3D56B6007FE188 /* BrandModel.swift in Sources */,
 				5127C21A2B3D3049007FE188 /* TitleView.swift in Sources */,
 				5127C2322B3D6CE8007FE188 /* QuantityFavouriteDetailView.swift in Sources */,
